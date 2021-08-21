@@ -11,34 +11,25 @@ Terra,luna
 Bitcoin Cash,bch
 Chainlink,link
 Litecoin,ltc
-Internet Computer,icp
-Wrapped Bitcoin,wbtc
 Polygon,matic
 Stellar,xlm
-Ethereum Classic,etc
 VeChain,vet
 Theta Network,theta
 Filecoin,fil
 TRON,trx
-OKB,okb
 Avalanche,AVAX
 Cosmos,atom
 Aave,aave
 FTX Token,ftt
-cETH,ceth
 EOS,eos
 Monero,xmr
 PancakeSwap,cake
-cDAI,cdai
-Klaytn,klay
 The Graph,grt
 Axie Infinity,axs
 Shiba Inu,shib
-Crypto.com Coin,cro
 NEO,neo
 Algorand,algo
 Maker,mkr
-Bitcoin SV,bsv
 Tezos,xtz
 Kusama,ksm
 Amp,amp
@@ -46,31 +37,19 @@ LEO Token,leo
 Elrond,egld
 IOTA,miota
 BitTorrent,btt
-Lido Staked Ether,steth
 Sushi,sushi
 Celsius Network,cel
 Quant,qnt
-Huobi Token,ht
 Compound,comp
 Waves,waves
-THORChain,rune
-Hedera Hashgraph,hbar
 Dash,dash
-Decred,dcr
-Synthetix Network Token,snx
 Helium,hnt
 Near,near
 XDC Network,xdc
 Holo,hot
-Huobi BTC,hbtc
 Chiliz,chz
 NEM,xem
 Theta Fuel,tfuel
-Zcash,zec
-Enjin Coin,enj
-Stacks,stx
-Audius,audio
-yearn.finance,yfi
 Qtum,qtum
 Flow,flow
 Ravencoin,rvn
@@ -78,12 +57,9 @@ Arweave,ar
 Zilliqa,zil
 Fantom,ftm
 Voyager Token,vgx
-xSUSHI,xsushi
 Basic Attention Token,bat
-Bitcoin Cash ABC,bcha
 Bitcoin Gold,btg
 BitClout,clout
 Decentraland,mana
-Harmony,one
 NEXO,nexo
 SafeMoon,safemoon

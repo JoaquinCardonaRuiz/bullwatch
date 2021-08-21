@@ -42,8 +42,14 @@ def connect_to_endpoint(url, params):
 
 
 def main():
-    with open('cryptos.csv','r') as csvfile:
+    headers = ['Name','Symbol','Bullish','Bearish','Ratio']
+
+    with open('cryptos.csv','r') as csvfile, open('output.csv','w+') as outfile:
         reader = csv.reader(csvfile)
+        writer = csv.writer(outfile)
+
+        writer.writerow(headers)
+
         # For every coin in the CSV file
         for coin in reader:
 
@@ -55,14 +61,20 @@ def main():
             query_params = {'query': '("#{}" OR "#{}" OR "{}" OR "{}") (bear OR bearish)'.format(coin[0],coin[0],coin[1],coin[1])}
             negative = connect_to_endpoint(search_url, query_params)['meta']['total_tweet_count']
 
-            print('Coin:',coin[0],'(',coin[1],')')
             if negative > 0:
-                print('Ratio =',round(positive/negative,2))
+                ratio = round(positive/negative,2)
             else:
-                print('Ratio = ∞')
+                ratio = '∞'
+            
+
+            print('Coin:',coin[0],'(',coin[1],')')
+            print('Ratio =',ratio)
             print('Bullish posts =',positive)
             print('Bearish posts =',negative)
             print('-'*20)
+
+            writer.writerow([coin[0],coin[1],positive,negative,ratio])
+
 
 
 if __name__ == "__main__":
