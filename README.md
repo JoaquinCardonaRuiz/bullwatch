@@ -4,4 +4,4 @@ A simple script that searches for recent tweets containing the names and symbols
 
 ## Instructions
 
-Clone the repo, open config.json, and replace "Insert your bearer token here" for your bearer token. To get a bearer token, you must gain access to the twitter api at https://developer.twitter.com/en/docs.
+Clone the repo, open config.json, and replace "Insert your bearer token here" with your bearer token. To get a bearer token, you must gain access to the twitter api at https://developer.twitter.com/en/docs.
