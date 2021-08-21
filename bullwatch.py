@@ -24,6 +24,31 @@ if bearer_token == 'Insert your bearer token here':
 # URL for recent twitters in the twitter API
 search_url = "https://api.twitter.com/2/tweets/counts/recent"
 
+
+def get_time():
+    '''
+    This method returns a string indicating the current timestamp, 
+    specifying year, month, day, hour, minute, and second.
+    '''
+    import datetime
+    return datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+
+
+def create_output_file():
+    '''
+    This method creates a folder called 'output' if it does not exist 
+    already, and creates and returns the output file to be used by the 
+    program.
+    '''
+    try:
+        os.mkdir('output')
+    except:
+        pass
+    output_filename = 'output/' + get_time() + '.csv'
+    output = open(output_filename,'w')
+    return output
+
+
 def bearer_oauth(r):
     """
     Method required by bearer token authentication.
@@ -44,7 +69,7 @@ def connect_to_endpoint(url, params):
 def main():
     headers = ['Name','Symbol','Bullish','Bearish','Ratio']
 
-    with open('cryptos.csv','r') as csvfile, open('output.csv','w+') as outfile:
+    with open('cryptos.csv','r') as csvfile, create_output_file() as outfile:
         reader = csv.reader(csvfile)
         writer = csv.writer(outfile)
 
